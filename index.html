@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="name"><h1>Budget App</h1></header>
+    <div id="container">
+        <div id="budget_box">
+            <h3 id="budget_text">Please Enter Budget</h3>
+            <input type="text" id="budget">
+            <button id="budget_btn" onclick="budget_submit()">Calculate</button>
+        </div>
+
+        <div id='display'>
+            <div id="display_budget">
+                <h3>Budget</h3>
+                <img class="_img" id="budget_img" src="images/money.png">
+                <div id="budget_show"><img id="taka" src="images/taka.png"><p class="display_value" id="budget_value">0</p></div>
+            </div>
+            <div id="display_expense">
+                <h3>Expense</h3>
+                <img class="_img" id="expense_img" src="images/expense.png">
+                <div id="budget_show"><img id="taka" src="images/taka.png"><p class="display_value" id="expense_value">0</p></div>
+            </div>
+            <div id="display_Balance">
+                <h3>Balance</h3>
+                <img class="_img" id="balance_img" src="images/balance.png">
+                <div id="budget_show"><img id="taka" src="images/taka.png"><p class="display_value" id="balance_value">0</p></div>
+            </div>
+        </div>
+
+        <div id="expense_box">
+            <h3 id="expense_text">Please Enter Expense</h3>
+            <input type="text" class="expense" id="expense_name">
+            <h3>Please Enter Expense Amount</h3>
+            <input type="text" class="expense" id="expense_input">
+            <button id="expense_btn" onclick="expense_submit()">Add Expense</button>
+        </div>
+
+        <div id="stat">
+           <div class="stat_title"><h2>Expense Title</h2><h2>Expense value</h2></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

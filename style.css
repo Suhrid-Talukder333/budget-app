@@ -1,0 +1,270 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    position: relative;
+    display: grid;
+    grid-template-areas: 
+    'b b d d'
+    'e e s s '
+    ;
+}
+
+#budget_show {
+    display: flex;
+    flex-direction: row;
+}
+
+.display_value {
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#taka {
+    width: 10%;
+    padding: 1rem;
+}
+
+#name {
+    margin: 2rem;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+/* budget box */
+
+#budget_box {
+    grid-area: b;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1px;
+    font-size: 1rem;
+    width: fit-content;
+    background-color: rgb(73, 236, 106);
+    border: 1px solid grey;
+    height: fit-content;
+}
+
+#budget_box > h3 {
+    margin: .5rem;
+}
+
+#budget {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    margin: .5rem;
+    width: 25vw;
+    height: 30px;
+    padding: 1px;
+}
+
+#budget_btn {
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    margin: .5rem;
+    width: 5rem;
+    height: 2rem;
+}
+
+/* //expense box */
+
+#expense_box {
+    grid-area: e;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1px;
+    font-size: 1rem;
+    width: fit-content;
+    background-color: rgba(241, 0, 0, 0.7);
+    border: 2px solid grey;
+    height: fit-content;
+    
+}
+
+#expense_box > h3 {
+    margin: .5rem;
+}
+
+.expense {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    margin: .5rem;
+    width: 25vw;
+    height: 30px;
+    padding: 1px;
+}
+
+#expense_btn {
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    margin: .5rem;
+    width: 5rem;
+    height: fit-content;
+}
+
+/* display */
+#display {
+    grid-area: d;
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    padding: 1rem;
+    
+    width: 50rem;
+}
+
+/* budget Display */
+#display_budget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    color: blue;
+}
+
+#display_budget > h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+._img {
+    padding: 1rem;
+    width: 50%;
+    height: 50%;
+}
+
+/* expense display */
+#display_expense {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    color: red;
+}
+
+#display_expense > h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+/* balance display */
+#display_Balance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    color: green;
+}
+
+#display_Balance > h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+/* stat */
+#stat {
+    padding: 1rem;
+    margin: 2rem;
+    grid-area: s;
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.stat_title {
+    display: flex;
+    flex-direction: row;
+}
+
+.stat_title > h2 {
+    padding-left: 3rem;
+}
+
+
+.title {
+    text-align: center;
+    font-size: 1rem;
+    padding-left: 4rem;
+    width: max-content;
+}
+
+.value {
+    text-align: center;
+    font-size: 1rem;
+    padding-left: 10rem;
+    width: max-content;
+}
+
+#icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 5%;
+} 
+
+.queries{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    color: red;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+#edit:hover {
+    cursor: pointer;
+}
+
+#dlet:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    #container {
+        width: 100vw;
+        grid-template-areas: 
+        'b b'
+        'e e' 
+        'd d'
+        's s'
+        ;
+    }
+
+    #display {
+        flex-direction: column;
+    }
+    
+    #stat {
+        font-size: 10px;
+        width: 100%;
+        padding: 1%;
+        margin: 0%;
+    }
+
+    #title {
+        width: 15%;
+        text-align: left;
+    }
+    
+    #value {
+        width: 15%;
+        text-align: left;
+    }
+    
+    #icon {
+        width: 5%;
+    }
+    
+}
